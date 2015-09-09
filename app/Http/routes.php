@@ -12,5 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
+});
+
+Route::get('/departments', function () {
+    return view('department');
+});
+
+Route::get('/rbudget', function () {
+    return view('rbudget');
+});
+
+Route::get('/abudget', function () {
+    return view('abudget');
+});
+
+
+Route::get('/category', function () {
+    return view('category');
 });
