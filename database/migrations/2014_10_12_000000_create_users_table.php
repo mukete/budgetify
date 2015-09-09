@@ -7,13 +7,13 @@ class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('department_id')->unsigned();
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password', 60);
@@ -24,8 +24,6 @@ class CreateUsersTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {
