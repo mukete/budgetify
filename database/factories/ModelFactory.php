@@ -44,3 +44,16 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
         'description' => $faker->sentence,
     ];
 });
+
+$factory->define(App\Budget::class, function (Faker\Generator $faker) {
+    return [
+        'department_id' => 1,
+        'item' => $faker->buildingNumber,
+        'quantity' => $faker->randomDigit,
+        'price' => $faker->randomDigit,
+        'category_id' => 1,
+        'status' => 'DRAFT',
+        'start_year' => $faker->year,
+        'end_year' => $faker->year,
+    ];
+});

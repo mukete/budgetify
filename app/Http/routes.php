@@ -12,22 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('master');
+    return view('website.login');
+});
+Route::get('dashboard', function () {
+    return view('website.dashboard');
 });
 
-Route::get('/departments', function () {
-    return view('department');
-});
-
-Route::get('/rbudget', function () {
-    return view('rbudget');
-});
-
-Route::get('/abudget', function () {
-    return view('abudget');
-});
-
-
-Route::get('/category', function () {
-    return view('category');
-});
+Route::resource('budget', 'BudgetController');
