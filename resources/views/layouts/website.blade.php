@@ -53,7 +53,7 @@
 			<li class="active"><a href="{{URL::to('dashboard')}}"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
 			<li><a href="{{URL::to('budget')}}"><span class="glyphicon glyphicon-th"></span> Budget</a></li>
 			<li><a href=""><span class="glyphicon glyphicon-stats"></span> Charts</a></li>
-			<li><a href=""><span class="glyphicon glyphicon-list-alt"></span> Expenditures</a></li>
+			<li><a href="{{URL::to('expenditure')}}"><span class="glyphicon glyphicon-list-alt"></span> Expenditures</a></li>
 			<li><a href=""><span class="glyphicon glyphicon-pencil"></span> Requests</a></li>
 		</ul>
 	</div><!--/.sidebar-->

@@ -14,8 +14,10 @@ class CreateExpenditures extends Migration
         Schema::create('expenditures', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->integer('department_id')->unsigned();
             $table->string('code')->unique();
-            $table->enum('status', array('DRAFT', 'SUBMITTED', 'APPROVDE'))->default('DRAFT');
+            $table->text('details');
+            $table->enum('status', array('DRAFT', 'SUBMITTED', 'APPROVED'))->default('DRAFT');
             $table->timestamps();
         });
     }

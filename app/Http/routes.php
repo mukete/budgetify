@@ -20,3 +20,4 @@ Route::get('dashboard', function () {
 
 Route::resource('budget', 'BudgetController');
 Route::resource('requests', 'RequestsController');
+Route::resource('expenditure', 'ExpenditureController');
